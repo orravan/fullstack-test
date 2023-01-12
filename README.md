@@ -2,16 +2,16 @@
 
 The repository of "todos" is written in [next.js](https://nextjs.org/) 
 
-## Your goals:
 
-Mainly... The code was made by a junior, it is important to have a clean code base.
+## How to install ?
 
-## You have to add :
-- Add the function "remove" a todo
-- Add the function "update" a todo
-- Add the function "create" a todo
 
-### Bonus:
+````shell
+npm install
+````
 
-- Add a filter system on the "state".
-- Make a nice layout
+## How to run ?
+
+````shell
+npm run dev
+````

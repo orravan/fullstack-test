@@ -1,11 +1,11 @@
-import { ITodo } from "../interfaces/todos";
+import { ITodo, StateEnum } from "../interfaces/todos.d";
 
 export const todos: ITodo[] = [{
     _id: "1",
     label: "Update one Todo",
     description: "I have to create a system that permit to update the todo",
     createdAt: new Date(),
-    state: "in-progess",
+    state: StateEnum.INPROGRESS,
     updatedAt: undefined,
 },
 {
@@ -13,6 +13,6 @@ export const todos: ITodo[] = [{
     label: "Remove one Todo",
     description: "I have to create a system that permit to remove one todo",
     createdAt: new Date(),
-    state: "todo",
+    state: StateEnum.TODO,
     updatedAt: undefined,
 }];

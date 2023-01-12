@@ -7,13 +7,16 @@ export default function handler(
     req: NextApiRequest,
     res: NextApiResponse<ITodo[]>
 ) {
-    const todoCompleted: ITodo = {
-        ...req.body.todo,
-        _id: (todos.length + 1).toString(),
-        createdAt: new Date()
-    }
+    if (req.body.todo) {
+        const index = todos.findIndex(todo => todo._id === req.body.todo._id);
 
-    todos.push(todoCompleted);
+        if (index >= 0) {
+            todos[index] = {
+                ...todos[index],
+                ...req.body.todo
+            }
+        }
+    }
 
     res.status(200).json(todos);
 }
